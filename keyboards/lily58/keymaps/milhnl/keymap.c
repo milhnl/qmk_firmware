@@ -120,15 +120,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 enum combo_events {
-    LGUI_A_MEDIA,
+    LGUI_M_MEDIA,
 };
-const uint16_t PROGMEM media_combo[] = {KC_LGUI, KC_A, COMBO_END};
+const uint16_t PROGMEM media_combo[] = {KC_LGUI, KC_M, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
-    [LGUI_A_MEDIA] = COMBO_ACTION(media_combo),
+    [LGUI_M_MEDIA] = COMBO_ACTION(media_combo),
 };
 void process_combo_event(uint16_t combo_index, bool pressed) {
   switch(combo_index) {
-    case LGUI_A_MEDIA:
+    case LGUI_M_MEDIA:
       if (pressed) {
         layer_on(_MEDIA);
       }
